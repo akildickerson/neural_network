@@ -25,7 +25,7 @@ neural_network/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/neural_network.git
+git clone https://github.com/akildickerson/neural_network.git
 cd neural_network
 ```
 
@@ -47,4 +47,3 @@ python src/main.py
 - Tanh normalization for numerical features
 - Hyperparameter tuning (learning rate optimization)
 - Train/validation/test split
-
