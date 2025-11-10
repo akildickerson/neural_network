@@ -67,11 +67,12 @@ class NeuralNetwork:
 
         for i in range(epochs):
             y_hat, activations, z = self.forward_pass(self.X)
-            costs = self.cost(y_hat, self.Y)
+            cost = self.cost(y_hat, self.Y)
+            costs.append(cost)
             y_hat_labels = (y_hat > 0.5).astype(int)
 
             accuracy = np.mean(y_hat_labels == self.Y)
             self.back_propogation(y_hat, activations, z, learning_rate)
             if i % 500 == 0:
-                print(f"Epoch {i}: cost = {costs:.4f}, accuracy = {accuracy * 100:.2f}%")
+                print(f"Epoch {i}: cost = {cost:.4f}, accuracy = {accuracy * 100:.2f}%")
         return costs
